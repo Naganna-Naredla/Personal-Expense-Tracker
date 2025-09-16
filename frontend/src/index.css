@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  padding: 12px 20px;
+  background: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #61dafb;
+}
+
+.btn-logout {
+  color: white;
+  background: transparent;
+  border: 1px solid #61dafb;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-logout:hover {
+  background: #61dafb;
+  color: #282c34;
+}
+
+/* Dashboard */
+.dashboard-container {
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(to right, #eef2f3, #f9f9f9);
+}
+
+.dashboard-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2a5298;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.expense-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.expense-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expense-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.expense-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  color: #1e3c72;
+}
+
+.expense-card p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Expense Form */
+.expense-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.expense-form input,
+.expense-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  flex: 1;
+  min-width: 120px;
+  transition: border 0.2s;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #2a5298;
+}
+
+.expense-form button {
+  background: #2a5298;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.expense-form button:hover {
+  background: #1e3c72;
+}
+
+/* Auth Pages (Login & Register) */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background: linear-gradient(to right, #eef2f3, #f9f9f9);
+}
+
+.auth-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2a5298;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #2a5298;
+  box-shadow: 0px 0px 5px rgba(42, 82, 152, 0.3);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #2a5298, #1e3c72);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Reports */
+.reports-page {
+  padding: 40px;
+  min-height: 100vh;
+  background: #f5f7fa;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-page h1 {
+  color: #2a5298;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.report-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-section h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-weight: bold;
+  text-align: center;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.expense-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.expense-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.expense-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
